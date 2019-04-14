@@ -40,7 +40,7 @@ public class Statemachine : MonoBehaviour
                 // Set up default values 
                 TicTacToePanel.gameObject.SetActive(false);
                 InputPanel.gameObject.SetActive(false);
-                ReadyPanel.gameObject.SetActive(true);
+                GameStartPanel.gameObject.SetActive(true);
                 StartCoroutine(IntroCountdown(3)); // animate count down
                 break;
             case gamestate.WAITINGFORTILE:
@@ -73,9 +73,9 @@ public class Statemachine : MonoBehaviour
     IEnumerator IntroCountdown(float secs)
     {
         yield return new WaitForSeconds(secs);
-        ReadyPanel.gameObject.GetComponentInChildren<Text>().text = "Go!";
+        GameStartPanel.gameObject.GetComponentInChildren<Text>().text = "Go!";
         yield return new WaitForSeconds(.5f);
-        ReadyPanel.gameObject.SetActive(false);
+        GameStartPanel.gameObject.SetActive(false);
         gstate = gamestate.WAITINGFORTILE;
 
     }

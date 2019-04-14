@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class QuestionManager : MonoBehaviour
 {
+    public string[] Questions;
+
     // Start is called before the first frame update
     void Start()
     {
