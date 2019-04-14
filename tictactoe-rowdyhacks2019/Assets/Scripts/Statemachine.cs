@@ -28,13 +28,14 @@ public class Statemachine : MonoBehaviour
 
     public GameObject InputPanel;
     public Text inputPanelTitle;
+    public Text inputPanelProblem;
     public GameObject TicTacToePanel;
     //TopBarPanel
     //Pause Panel
     public GameObject ResultPanel;
     public GameObject GameStartPanel;
     public QuestionInfo qi;
-
+    public tictactoeMaster tttm;
     public enum answerState {
         ansNull,
         ansCorrect,
@@ -46,7 +47,16 @@ public class Statemachine : MonoBehaviour
     {
         switch (gstate) {
             case gamestate.START:
+
+                // check if won  if so go to end 
+
+                tttm.checkIfWon();
+                if (tttm.winnerFound) {
+                    gstate = gamestate.END;
+                }
                 // Set up default values 
+                TicTacToePanel.transform.position = new Vector3(TicTacToePanel.transform.position.x, TicTacToePanel.transform.position.y, 0f);
+
                 TicTacToePanel.gameObject.SetActive(false);
                 InputPanel.gameObject.SetActive(false);
                 GameStartPanel.gameObject.SetActive(true);
@@ -60,10 +70,14 @@ public class Statemachine : MonoBehaviour
                 // open panel
                 break;
             case gamestate.WAITINGFORANSWER:
-                TicTacToePanel.gameObject.SetActive(false);
+                TicTacToePanel.transform.position = new Vector3(TicTacToePanel.transform.position.x, TicTacToePanel.transform.position.y, 9999f);
+
+                //TicTacToePanel.gameObject.SetActive(false);
                 InputPanel.gameObject.SetActive(true);
-                inputPanelTitle.text = qi.num1 + opr[qi.opnum] + qi.num2;
-                
+                if (qi != null)
+                    inputPanelProblem.text = qi.num1 + opr[qi.opnum] + qi.num2;
+                else
+                    inputPanelProblem.text = "";
                 // Enable draw functionallity to player 
                 //(let user see question, check for player hand writting input 
                 // analize image file via google vision update ui feedback from google vision
@@ -73,6 +87,7 @@ public class Statemachine : MonoBehaviour
                 // otherwise if input recieved automatically right for demo 
                 break;
             case gamestate.RESULT:
+
                 // Check Who got answer correct first 
                 // Update tiles accordingly 
                 // go to waiting 
@@ -81,21 +96,101 @@ public class Statemachine : MonoBehaviour
                 {
                     case answerState.ansCorrect:
                         // update panel  CORRECT checkmark object
-
-                        break;
+                        inputPanelProblem.text = "CORRECT!";
+                        if (qi._name == "A1")
+                        {
+                            tttm.A1 = 1;
+                        }
+                        else if (qi._name == "A2")
+                        {
+                            tttm.A2 = 1;
+                        }
+                        else if (qi._name == "A3")
+                        {
+                            tttm.A3 = 1;
+                        }
+                        else if (qi._name == "B1")
+                        {
+                            tttm.B1 = 1;
+                        }
+                        else if (qi._name == "B2")
+                        {
+                            tttm.B2 = 1;
+                        }
+                        else if (qi._name == "B3")
+                        {
+                            tttm.B3 = 1;
+                        }
+                        else if (qi._name == "C1")
+                        {
+                            tttm.C1 = 1;
+                        }
+                        else if (qi._name == "C2")
+                        {
+                            tttm.C2 = 1;
+                        }
+                        else if (qi._name == "C3")
+                        {
+                            tttm.C3 = 1;
+                        }
+                  break;
                     case answerState.ansWrong:
                         // update panel  WRONG checkmark object 
+                        inputPanelProblem.text = "WRONG!";
+                        tttm.buttonSelected = qi._name;
+
+                        if (qi._name == "A1")
+                        {
+                            tttm.A1 = 0;
+                        }
+                        else if (qi._name == "A2")
+                        {
+                            tttm.A2 = 0;
+                        }
+                        else if (qi._name == "A3")
+                        {
+                            tttm.A3 = 0;
+                        }
+                        else if (qi._name == "B1")
+                        {
+                            tttm.B1 = 0;
+                        }
+                        else if (qi._name == "B2")
+                        {
+                            tttm.B2 = 0;
+                        }
+                        else if (qi._name == "B3")
+                        {
+                            tttm.B3 = 0;
+                        }
+                        else if (qi._name == "C1")
+                        {
+                            tttm.C1 = 0;
+                        }
+                        else if (qi._name == "C2")
+                        {
+                            tttm.C2 = 0;
+                        }
+                        else if (qi._name == "C3")
+                        {
+                            tttm.C3 = 0;
+                        }
+
                         break;
 
                     case answerState.ansNull:
                         //error
                         break;
 
-                        // check if won 
-                        //if so go ot end.
+                
                 }
+                StartCoroutine(roundEndCountdown(1.5f)); // animate count down
                 break;
             case gamestate.END:
+                if (tttm.winnerNum == 1) {
+                    ResultPanel.SetActive(true);
+                }
+
                 //decide what player won and end game 
                 break;
         }
@@ -119,9 +214,28 @@ public class Statemachine : MonoBehaviour
 
     public void getQuestionInfo(QuestionInfo in_qi) {
         in_qi = qi;
+        if (qi != null)
+        {
+            Debug.Log("Got qi:" + qi.name);
+            tttm.buttonSelected = qi._name;
+        }
     }
 
     public void tileSelected(){
          gstate = gamestate.WAITINGFORANSWER;
+    }
+
+
+    IEnumerator roundEndCountdown(float secs)
+    {
+        yield return new WaitForSeconds(secs);
+        gstate = gamestate.START;
+    }
+
+
+    IEnumerator GameEndCountdown(float secs)
+    {
+        yield return new WaitForSeconds(secs);
+        Application.LoadLevel("Menu");
     }
 }

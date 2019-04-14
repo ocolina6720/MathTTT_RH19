@@ -16,6 +16,8 @@ public class gameManager : MonoBehaviour{
     public Text TallyScore; // look into player prefs to store highscores 
     public Statemachine sm;
     public bool timeStarted = false;
+
+
     // Start is called before the first frame update
     void Start(){
        
@@ -40,6 +42,7 @@ public class gameManager : MonoBehaviour{
                 {
                     currentTime = 0;
                     counterText.color = Color.red;
+                    sm.ansState = Statemachine.answerState.ansWrong;
                 }
             }
         }

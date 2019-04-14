@@ -9,6 +9,9 @@ public class tictactoeMaster : MonoBehaviour
     public int winnerNum = 0;
     public string buttonSelected;
 
+    public Sprite x;
+    public Sprite o;
+
     // Start is called before the first frame update
     void Start()
     {

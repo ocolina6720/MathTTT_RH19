@@ -278,6 +278,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 196894389}
+        m_MethodName: tileSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &62183854
@@ -329,6 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fb666cd2354ce4ca1e4dd11347f8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: C1
   num1: 0
   opnum: 0
   num2: 0
@@ -425,6 +437,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 196894389}
+        m_MethodName: tileSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &108657298
@@ -476,6 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fb666cd2354ce4ca1e4dd11347f8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: A1
   num1: 0
   opnum: 0
   num2: 0
@@ -630,11 +654,13 @@ MonoBehaviour:
   gstate: 0
   mResult: 0
   InputPanel: {fileID: 818411262}
-  inputPanelTitle: {fileID: 0}
+  inputPanelTitle: {fileID: 1846292390}
+  inputPanelProblem: {fileID: 1538716212}
   TicTacToePanel: {fileID: 1143252259}
   ResultPanel: {fileID: 1132855140}
   GameStartPanel: {fileID: 47812480}
   qi: {fileID: 0}
+  tttm: {fileID: 0}
   ansState: 0
 --- !u!114 &196894390
 MonoBehaviour:
@@ -684,6 +710,8 @@ MonoBehaviour:
   winnerFound: 0
   winnerNum: 0
   buttonSelected: 
+  x: {fileID: 21300000, guid: d84271e8b14d3af4781268c929373fc9, type: 3}
+  o: {fileID: 21300000, guid: 9c2bb7051745d8842b3e80847b782463, type: 3}
 --- !u!1 &242058356
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 27.299973}
+  m_AnchoredPosition: {x: 0, y: -86.3}
   m_SizeDelta: {x: 389.6, y: 97.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242058358
@@ -754,7 +782,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0 - 0
+  m_Text: 1 - 0
 --- !u!222 &242058359
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1175,7 +1203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &301457601
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1328,6 +1356,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 196894389}
+        m_MethodName: tileSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &373754439
@@ -1379,6 +1418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fb666cd2354ce4ca1e4dd11347f8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: A2
   num1: 0
   opnum: 0
   num2: 0
@@ -1475,6 +1515,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 196894389}
+        m_MethodName: tileSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &524625871
@@ -1526,6 +1577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fb666cd2354ce4ca1e4dd11347f8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: B2
   num1: 0
   opnum: 0
   num2: 0
@@ -1931,7 +1983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 124.59999}
+  m_AnchoredPosition: {x: 0, y: 11}
   m_SizeDelta: {x: 389.6, y: 97.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &807678822
@@ -1967,7 +2019,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player # wins!'
+  m_Text: Player 1 wins!
 --- !u!222 &807678823
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2012,8 +2064,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -162.3}
-  m_SizeDelta: {x: 0, y: -324.6}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &818411264
 MonoBehaviour:
@@ -2143,6 +2195,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 196894389}
+        m_MethodName: tileSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &894123700
@@ -2194,6 +2257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fb666cd2354ce4ca1e4dd11347f8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: B3
   num1: 0
   opnum: 0
   num2: 0
@@ -2210,6 +2274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FadingScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217175722002387662, guid: cd618e14c39f69343b586776faa706ae,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4217175722002387665, guid: cd618e14c39f69343b586776faa706ae,
         type: 3}
@@ -2358,7 +2427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 23.3, y: 329}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1091054689
@@ -2452,6 +2521,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 196894389}
+        m_MethodName: tileSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1091054692
@@ -2503,6 +2583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fb666cd2354ce4ca1e4dd11347f8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: C3
   num1: 0
   opnum: 0
   num2: 0
@@ -2604,7 +2685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1132855141
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3156,7 +3237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1409913326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3367,7 +3448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1471154843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3670,7 +3751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 413.3}
+  m_AnchoredPosition: {x: 2, y: 247}
   m_SizeDelta: {x: 644, y: 129.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1538716212
@@ -4047,6 +4128,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 196894389}
+        m_MethodName: tileSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1736504405
@@ -4098,6 +4190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fb666cd2354ce4ca1e4dd11347f8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: C2
   num1: 0
   opnum: 0
   num2: 0
@@ -4137,7 +4230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 85.5, y: 369.40002}
+  m_AnchoredPosition: {x: 85.5, y: 40}
   m_SizeDelta: {x: 323, y: 62.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799339845
@@ -4173,7 +4266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Timer :)
+  m_Text: 
 --- !u!222 &1799339846
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4271,7 +4364,7 @@ GameObject:
   - component: {fileID: 1846292390}
   - component: {fileID: 1846292392}
   m_Layer: 0
-  m_Name: Text
+  m_Name: inputpanelTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4293,7 +4386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 518.3}
+  m_AnchoredPosition: {x: 2, y: 352.00006}
   m_SizeDelta: {x: 644, y: 129.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1846292390
@@ -4318,10 +4411,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b98e7bddb68aab84e9ec5df6a8f1091b, type: 3}
-    m_FontSize: 70
+    m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -4329,7 +4422,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Question is ...
+  m_Text: Your problem is ...
 --- !u!222 &1846292391
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4532,6 +4625,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 196894389}
+        m_MethodName: tileSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1937021788
@@ -4583,6 +4687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fb666cd2354ce4ca1e4dd11347f8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: B1
   num1: 0
   opnum: 0
   num2: 0
@@ -4625,7 +4730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -183.3, y: 387.7}
+  m_AnchoredPosition: {x: -183.3, y: 58.299988}
   m_SizeDelta: {x: 137.4, y: 52.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2056063346
@@ -4832,6 +4937,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 196894389}
+        m_MethodName: tileSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2078690778
@@ -4883,6 +4999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fb666cd2354ce4ca1e4dd11347f8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: A3
   num1: 0
   opnum: 0
   num2: 0

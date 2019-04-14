@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class QuestionInfo : MonoBehaviour
 {
+    public string _name;
     public int num1;
     public int opnum;
     string[] opr = new string[] { "-", "+", "*", "/" };
