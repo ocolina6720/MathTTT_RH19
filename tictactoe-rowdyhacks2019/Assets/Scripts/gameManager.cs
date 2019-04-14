@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour{
 
+
     public Text counterText;
 
     //Change the startTime if too long or too short
