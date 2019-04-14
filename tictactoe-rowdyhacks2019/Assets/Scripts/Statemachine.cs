@@ -8,19 +8,28 @@ public class Statemachine : MonoBehaviour
     public gameManager gm;
     public enum gamestate {
         START,
+        WAITINGFORTILE,
         WAITINGFORANSWER,
         RESULT, 
         END 
     };
     public gamestate gstate;
+
+
+    public enum matchResult
+    {
+        PLAYER1WIN,
+        PLAYER2WIN,
+        DRAW
+    };
+    public matchResult mResult;
+
+
     public GameObject InputPanel;
     public GameObject TicTacToePanel;
     //TopBarPanel
     //Pause Panel
     public GameObject ResultPanel;
-    public GameObject ReadyPanel;
-    public GameObject DrawingPanel;
-  
     public GameObject GameStartPanel;
 
 
@@ -29,12 +38,20 @@ public class Statemachine : MonoBehaviour
         switch (gstate) {
             case gamestate.START:
                 // Set up default values 
+                TicTacToePanel.gameObject.SetActive(false);
+                InputPanel.gameObject.SetActive(false);
                 ReadyPanel.gameObject.SetActive(true);
                 StartCoroutine(IntroCountdown(3)); // animate count down
                 break;
-            case gamestate.WAITINGFORANSWER:
+            case gamestate.WAITINGFORTILE:
                 // Enable control functionallity to player 
                 // Let user select a tile, pop up answer drawing panel
+                InputPanel.gameObject.SetActive(true);
+
+                // open panel
+                break;
+            case gamestate.WAITINGFORANSWER:
+                // Enable draw functionallity to player 
                 //(let user see question, check for player hand writting input 
                 // analize image file via google vision update ui feedback from google vision
                 // allow for backspace on input (in case hand writting was bad) 
@@ -59,8 +76,12 @@ public class Statemachine : MonoBehaviour
         ReadyPanel.gameObject.GetComponentInChildren<Text>().text = "Go!";
         yield return new WaitForSeconds(.5f);
         ReadyPanel.gameObject.SetActive(false);
-        gstate = gamestate.WAITINGFORANSWER;
+        gstate = gamestate.WAITINGFORTILE;
 
+    }
+
+    public void GobacktoStart() {
+        gstate = gamestate.START;
     }
 
 }
