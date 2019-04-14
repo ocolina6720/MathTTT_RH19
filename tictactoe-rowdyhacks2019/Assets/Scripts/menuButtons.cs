@@ -8,4 +8,9 @@ public class menuButtons : MonoBehaviour
     {
         Application.LoadLevel(scenename);
     }
+
+    public void exit()
+    {
+        Application.Quit();
+    }
 }
