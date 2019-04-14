@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "725924869141",
+    "firebase_url": "https://rowdyhacks2019.firebaseio.com",
+    "project_id": "rowdyhacks2019",
+    "storage_bucket": "rowdyhacks2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725924869141:android:8d977427fca41fac",
+        "android_client_info": {
+          "package_name": "com.company.ProductName"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725924869141-jfcgi4uv9fv8uil3mrun7th0cfducb9t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmKCAJ6XMPTlwjolA4yppeDcRU5SkOxQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725924869141-jfcgi4uv9fv8uil3mrun7th0cfducb9t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
