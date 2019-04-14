@@ -76,6 +76,10 @@ public class TouchTrail : MonoBehaviour
             sm.gstate = Statemachine.gamestate.RESULT;
             // update tictactoMaster 
             // 
+          
+            
+            inputRecieved = false;
+           
         }
     }
 }

@@ -213,7 +213,7 @@ public class Statemachine : MonoBehaviour
     }
 
     public void getQuestionInfo(QuestionInfo in_qi) {
-        in_qi = qi;
+         qi = in_qi ;
         if (qi != null)
         {
             Debug.Log("Got qi:" + qi.name);
