@@ -11,6 +11,8 @@ public class gameManager : MonoBehaviour{
     public float startTime = 10;
     public float currentTime;
     // look into player prefs to store highscores 
+    public Text question; // equation 
+    public Text TallyScore; // look into player prefs to store highscores 
 
     // Start is called before the first frame update
     void Start(){

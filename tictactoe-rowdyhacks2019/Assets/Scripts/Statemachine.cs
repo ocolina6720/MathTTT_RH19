@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Statemachine : MonoBehaviour
 {
@@ -11,16 +12,25 @@ public class Statemachine : MonoBehaviour
         RESULT, 
         END 
     };
-    public gamestate gstate; 
+    public gamestate gstate;
+    public GameObject InputPanel;
+    public GameObject TicTacToePanel;
+    //TopBarPanel
+    //Pause Panel
+    public GameObject ResultPanel;
+    public GameObject ReadyPanel;
+    public GameObject DrawingPanel;
+  
+    public GameObject GameStartPanel;
+
 
     void Update()
     {
         switch (gstate) {
             case gamestate.START:
-                // wait for player to 
-                // set up default values
-                // go to waiting for answer
-
+                // Set up default values 
+                ReadyPanel.gameObject.SetActive(true);
+                StartCoroutine(IntroCountdown(3)); // animate count down
                 break;
             case gamestate.WAITINGFORANSWER:
                 // Enable control functionallity to player 
@@ -41,4 +51,16 @@ public class Statemachine : MonoBehaviour
         }
         
     }
+
+
+    IEnumerator IntroCountdown(float secs)
+    {
+        yield return new WaitForSeconds(secs);
+        ReadyPanel.gameObject.GetComponentInChildren<Text>().text = "Go!";
+        yield return new WaitForSeconds(.5f);
+        ReadyPanel.gameObject.SetActive(false);
+        gstate = gamestate.WAITINGFORANSWER;
+
+    }
+
 }
