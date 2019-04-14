@@ -91,6 +91,8 @@ public class Statemachine : MonoBehaviour
                         //error
                         break;
 
+                        // check if won 
+                        //if so go ot end.
                 }
                 break;
             case gamestate.END:

@@ -74,8 +74,8 @@ public class TouchTrail : MonoBehaviour
             //reference image with ScreenCapDirectory + "UserWrittenInput.png"
             sm.ansState = Statemachine.answerState.ansCorrect;
             sm.gstate = Statemachine.gamestate.RESULT;
-
-    
+            // update tictactoMaster 
+            // 
         }
     }
 }
