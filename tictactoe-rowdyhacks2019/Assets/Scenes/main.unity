@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 196894389}
   - component: {fileID: 196894391}
   - component: {fileID: 196894390}
+  - component: {fileID: 196894392}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -629,10 +630,12 @@ MonoBehaviour:
   gstate: 0
   mResult: 0
   InputPanel: {fileID: 818411262}
+  inputPanelTitle: {fileID: 0}
   TicTacToePanel: {fileID: 1143252259}
   ResultPanel: {fileID: 1132855140}
   GameStartPanel: {fileID: 47812480}
   qi: {fileID: 0}
+  ansState: 0
 --- !u!114 &196894390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,6 +660,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a17c19740ef6b4cb45dc8bc8a9ba48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &196894392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196894386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bd252e7e284dc4188268700a4ce0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  A1: 0
+  A2: 0
+  A3: 0
+  B1: 0
+  B2: 0
+  B3: 0
+  C1: 0
+  C2: 0
+  C3: 0
+  winnerFound: 0
+  winnerNum: 0
+  buttonSelected: 
 --- !u!1 &242058356
 GameObject:
   m_ObjectHideFlags: 0
