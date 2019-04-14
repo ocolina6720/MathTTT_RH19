@@ -12,7 +12,7 @@ public class TouchTrail : MonoBehaviour
     public bool inputRecieved = false;
     public bool screenCapRecieved;
     public string ScreenCapDirectory;
-
+    
     private void Start()
     {
         ScreenCapDirectory = Application.persistentDataPath + "/";
@@ -72,6 +72,10 @@ public class TouchTrail : MonoBehaviour
             screenCapRecieved = true;
             Debug.Log("Screen cap recieved and stored in: " + ScreenCapDirectory);
             //reference image with ScreenCapDirectory + "UserWrittenInput.png"
+            sm.ansState = Statemachine.answerState.ansCorrect;
+            sm.gstate = Statemachine.gamestate.RESULT;
+
+    
         }
     }
 }

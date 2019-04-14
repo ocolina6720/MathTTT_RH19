@@ -14,21 +14,34 @@ public class gameManager : MonoBehaviour{
     // look into player prefs to store highscores 
     public Text question; // equation 
     public Text TallyScore; // look into player prefs to store highscores 
-
+    public Statemachine sm;
+    public bool timeStarted = false;
     // Start is called before the first frame update
     void Start(){
-        currentTime = startTime;
-        counterText.text = ":" + startTime.ToString("00");
+       
     }
     // Update is called once per frame
     void Update(){
-        currentTime -= 1 * Time.deltaTime;
-        counterText.text = currentTime.ToString("00");
 
-        if(currentTime <= 1)
+        if (sm.gstate == Statemachine.gamestate.WAITINGFORANSWER)
         {
-            currentTime = 0;
-            counterText.color = Color.red;
+            if (!timeStarted)
+            {
+                currentTime = startTime;
+                counterText.text = ":" + startTime.ToString("00");
+                timeStarted = true;
+            }
+            else
+            {
+                currentTime -= 1 * Time.deltaTime;
+                counterText.text = currentTime.ToString("00");
+
+                if (currentTime <= 1)
+                {
+                    currentTime = 0;
+                    counterText.color = Color.red;
+                }
+            }
         }
     }
 }
